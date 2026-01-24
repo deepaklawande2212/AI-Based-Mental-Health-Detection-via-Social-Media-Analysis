@@ -16,7 +16,7 @@ log/      - Application logs
 Due to GitHub size limits, trained models and datasets are hosted externally.
 Below is the link, download all the folders(models and dataset) in server folder.
 
-link : 
+link : https://drive.google.com/drive/folders/1QZzihcoRo6mgz9ObY5cliwG7LX2LrAdB?usp=drive_link
 
 ## How to Run the Project
 
