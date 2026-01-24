@@ -19,8 +19,4 @@ link :
 
 ## How to Run the Project
 
-### Backend
-```bash
-cd server
-pip install -r requirements.txt
-uvicorn app.main:app --reload
+Everything is mentioned in readme files inside client and server
