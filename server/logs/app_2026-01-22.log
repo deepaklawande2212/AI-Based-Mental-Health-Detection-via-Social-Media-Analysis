@@ -1,0 +1,62 @@
+2026-01-22 09:57:45 | INFO     | app.main:lifespan:57 - 🚀 Starting Depression Detection System...
+2026-01-22 09:57:45 | INFO     | app.main:lifespan:61 - 📊 Initializing database connection...
+2026-01-22 09:57:45 | INFO     | app.config.database:connect_to_mongo:33 - 🔌 Connecting to MongoDB: mongodb+srv://dnyaneshwartanpuremulsanit:haH5719avivl1uzf@cluster0.5yajgad.mongodb.net/mental_health_detection
+2026-01-22 09:57:45 | ERROR    | app.config.database:connect_to_mongo:60 - ❌ Database connection error: The DNS query name does not exist: _mongodb._tcp.cluster0.5yajgad.mongodb.net.
+2026-01-22 09:57:45 | WARNING  | app.main:lifespan:67 - ⚠️ Database not available: Database connection failed: The DNS query name does not exist: _mongodb._tcp.cluster0.5yajgad.mongodb.net.
+2026-01-22 09:57:45 | INFO     | app.main:lifespan:68 - 📝 Running without database - some features may be limited
+2026-01-22 09:57:45 | INFO     | app.main:lifespan:72 - 🤖 Initializing AI models...
+2026-01-22 09:57:45 | INFO     | app.services.ai_models:load_models:38 - 🤖 Loading AI models...
+2026-01-22 09:57:45 | INFO     | app.services.decision_tree_predict:load_model:35 - 🔄 Loading Decision Tree model from D:\MentalHelth-copy\server\DECISION_TREE\decision_tree_model.pkl
+2026-01-22 09:57:48 | SUCCESS  | app.services.decision_tree_predict:load_model:58 - ✅ Decision Tree model loaded successfully
+2026-01-22 09:57:48 | SUCCESS  | app.services.ai_models:load_models:69 - ✅ DECISION_TREE model loaded successfully
+2026-01-22 09:57:48 | INFO     | app.services.cnn_predict:load_model:42 - 🔄 Loading CNN model from D:\MentalHelth-copy\server\CNN\CNN_MODEL.h5
+2026-01-22 09:57:49 | WARNING  | app.services.cnn_predict:load_model:75 - ⚠️ Old Keras tokenizer detected - using simplified preprocessing
+2026-01-22 09:57:49 | SUCCESS  | app.services.cnn_predict:load_model:85 - ✅ CNN model loaded successfully
+2026-01-22 09:57:49 | SUCCESS  | app.services.ai_models:load_models:69 - ✅ CNN model loaded successfully
+2026-01-22 09:57:49 | INFO     | app.services.lstm_predict:load_model:42 - 🔄 Loading LSTM model from D:\MentalHelth-copy\server\LSTM\best_lstm_model.h5
+2026-01-22 09:57:49 | SUCCESS  | app.services.lstm_predict:load_model:85 - ✅ LSTM model loaded successfully
+2026-01-22 09:57:49 | SUCCESS  | app.services.ai_models:load_models:69 - ✅ LSTM model loaded successfully
+2026-01-22 09:57:49 | INFO     | app.services.rnn_predict:load_model:42 - 🔄 Loading RNN model from D:\MentalHelth-copy\server\RNN\best_rnn_model.h5
+2026-01-22 09:57:50 | SUCCESS  | app.services.rnn_predict:load_model:85 - ✅ RNN model loaded successfully
+2026-01-22 09:57:50 | SUCCESS  | app.services.ai_models:load_models:69 - ✅ RNN model loaded successfully
+2026-01-22 09:57:50 | INFO     | app.services.bert_predict:load_model:32 - 🔄 Loading BERT model from D:\MentalHelth-copy\server\BERT
+2026-01-22 09:57:51 | SUCCESS  | app.services.bert_predict:load_model:54 - ✅ BERT model loaded successfully
+2026-01-22 09:57:51 | SUCCESS  | app.services.ai_models:load_models:69 - ✅ BERT model loaded successfully
+2026-01-22 09:57:51 | SUCCESS  | app.services.ai_models:load_models:79 - ✅ AI models initialization complete. Available models: ['decision_tree', 'cnn', 'lstm', 'rnn', 'bert']
+2026-01-22 09:57:51 | SUCCESS  | app.main:lifespan:78 - ✅ AI models initialized successfully
+2026-01-22 09:57:51 | SUCCESS  | app.main:lifespan:80 - 🎉 Depression Detection System started successfully!
+2026-01-22 09:58:09 | INFO     | app.main:log_requests:176 - 🌐 POST /api/csv/upload - 127.0.0.1
+2026-01-22 09:58:09 | INFO     | app.routes.csv:upload_csv_file:91 - 📁 API request to upload CSV file: test.csv
+2026-01-22 09:58:09 | INFO     | app.services.csv_service:process_csv_data:61 - 📊 Processing CSV data for analysis: test.csv
+2026-01-22 09:58:09 | INFO     | app.services.csv_service:process_csv_data:97 - 📊 Extracted 3533 text entries from 3533 valid rows
+2026-01-22 09:58:09 | WARNING  | app.services.csv_service:process_csv_data:125 - ⚠️ Could not store CSV data in database: Database not initialized. Call connect_to_mongo() first.
+2026-01-22 09:58:09 | INFO     | app.services.csv_service:process_csv_data:126 - 📝 Continuing without database storage
+2026-01-22 09:58:09 | SUCCESS  | app.services.csv_service:process_csv_data:128 - ✅ CSV processing completed: 3533 texts extracted
+2026-01-22 09:58:09 | INFO     | app.main:log_requests:186 - ✅ POST /api/csv/upload - 200 - 170.00ms
+2026-01-22 09:58:11 | INFO     | app.main:log_requests:176 - 🌐 OPTIONS /api/csv/analyze - 127.0.0.1
+2026-01-22 09:58:11 | INFO     | app.main:log_requests:186 - ✅ OPTIONS /api/csv/analyze - 200 - 2.02ms
+2026-01-22 09:58:11 | INFO     | app.main:log_requests:176 - 🌐 POST /api/csv/analyze - 127.0.0.1
+2026-01-22 09:58:11 | INFO     | app.routes.csv:analyze_csv_direct:591 - 🔮 Direct CSV analysis request for: test.csv
+2026-01-22 09:58:11 | INFO     | app.services.csv_service:process_csv_data:61 - 📊 Processing CSV data for analysis: test.csv
+2026-01-22 09:58:11 | INFO     | app.services.csv_service:process_csv_data:97 - 📊 Extracted 3533 text entries from 3533 valid rows
+2026-01-22 09:58:11 | WARNING  | app.services.csv_service:process_csv_data:125 - ⚠️ Could not store CSV data in database: Database not initialized. Call connect_to_mongo() first.
+2026-01-22 09:58:11 | INFO     | app.services.csv_service:process_csv_data:126 - 📝 Continuing without database storage
+2026-01-22 09:58:11 | SUCCESS  | app.services.csv_service:process_csv_data:128 - ✅ CSV processing completed: 3533 texts extracted
+2026-01-22 09:58:11 | WARNING  | app.routes.csv:analyze_csv_direct:621 - ⚠️ Text truncated for analysis (original: 241427 chars)
+2026-01-22 09:58:11 | INFO     | app.services.decision_tree_predict:predict:108 - 🔍 Decision Tree REAL prediction: Personality disorder with confidence: 1.000
+2026-01-22 09:58:11 | INFO     | app.services.decision_tree_predict:predict:109 - 🔍 Decision Tree REAL probabilities: {'Anxiety': 0.0, 'Bipolar': 0.0, 'Depression': 0.0, 'Normal': 0.0, 'Personality disorder': 1.0, 'Stress': 0.0, 'Suicidal': 0.0}
+2026-01-22 09:58:11 | INFO     | app.services.decision_tree_predict:_smart_validation:160 - ✅ Decision Tree using REAL prediction: Personality disorder
+2026-01-22 09:58:12 | INFO     | app.services.cnn_predict:predict:141 - 🔍 CNN REAL prediction: negative with confidence: 1.000
+2026-01-22 09:58:12 | INFO     | app.services.cnn_predict:_smart_validation:192 - ✅ CNN using REAL prediction: negative
+2026-01-22 09:58:14 | INFO     | app.services.lstm_predict:predict:141 - 🔍 LSTM REAL prediction: Stress with confidence: 1.000
+2026-01-22 09:58:14 | INFO     | app.services.lstm_predict:_smart_validation:192 - ✅ LSTM using REAL prediction: Stress
+2026-01-22 09:58:14 | INFO     | app.services.rnn_predict:predict:141 - 🔍 RNN REAL prediction: Normal with confidence: 0.840
+2026-01-22 09:58:14 | INFO     | app.services.rnn_predict:_smart_validation:192 - ✅ RNN using REAL prediction: Normal
+2026-01-22 09:58:20 | INFO     | app.services.bert_predict:predict:111 - 🔍 BERT REAL prediction: Normal with confidence: 0.611
+2026-01-22 09:58:20 | WARNING  | app.services.bert_predict:_smart_validation:309 - ⚠️ BERT OVERRIDE: Normal → depression (obvious negative text)
+2026-01-22 09:58:20 | INFO     | app.routes.csv:select_best_model:666 - 🎯 Selected bert for high-risk content (negative sentiment: 0.80)
+2026-01-22 09:58:20 | WARNING  | app.routes.csv:analyze_csv_direct:916 - ⚠️ Could not store analysis result: Database not initialized. Call connect_to_mongo() first.
+2026-01-22 09:58:20 | INFO     | app.main:log_requests:186 - ✅ POST /api/csv/analyze - 200 - 9562.09ms
+2026-01-22 10:00:40 | INFO     | app.main:lifespan:90 - 🛑 Shutting down Depression Detection System...
+2026-01-22 10:00:40 | INFO     | app.main:lifespan:101 - 🤖 AI models cleaned up
+2026-01-22 10:00:40 | SUCCESS  | app.main:lifespan:103 - ✅ Application shutdown complete
