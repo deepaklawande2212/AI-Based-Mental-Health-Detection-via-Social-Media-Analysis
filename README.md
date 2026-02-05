@@ -2,6 +2,11 @@
 
 This is a full-stack AI-based analysis project developed as an academic project.
 
+## Contributors
+- Deepak Lawande
+- Yash Khole
+- Sushrut Kadate
+
 ## Tech Stack
 - Frontend: React + TypeScript + Vite
 - Backend: FastAPI (Python)
