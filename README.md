@@ -1,6 +1,6 @@
 # AI Based Analysis System
 
-This is a full-stack AI-based analysis project developed as an academic project.
+This is a full-stack AI-based analysis project developed as an final year academic project.
 
 ## Contributors
 - Deepak Lawande
